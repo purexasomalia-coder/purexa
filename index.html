@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purexa Water</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">PUREXA<span>.</span></div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Hoyga</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Adeegyada</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <!-- <li><a href="#testimonials">Macaamiisha</a></li> -->
+        </ul>
+        <div class="nav-right">
+            <div class="cart-icon" onclick="toggleCart()">
+                <i data-lucide="shopping-cart"></i>
+                <span id="cart-count">0</span>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Dalabkaaga</h3>
+            <button onclick="toggleCart()" class="close-btn"><i data-lucide="x"></i></button>
+        </div>
+        <div id="cart-items" class="cart-items-list">
+            <p class="empty-msg">Cart-gaagu waa madhan yahay.</p>
+        </div>
+        <div class="cart-footer">
+            <button class="btn-checkout" onclick="checkoutWhatsApp()">Check Out (WhatsApp)</button>
+        </div>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="badge">MUQDISHO 2026</div>
+            <h1>Biyo <span class="gradient-text">Nadiif ah</span>, Nolol Caafimaad leh.</h1>
+            <p>Purexa waxay kuu keentay sifeeynta biyaha ee ugu casrisan dalka. Ku hel biyo saafi ah gurigaaga adigoo jooga caasimadda.</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn-dark">Eeg Adeegyada</a>
+                <a href="https://wa.me/252906160407" class="btn-whatsapp"><i data-lucide="message-circle"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <img src="https://images.unsplash.com/photo-1594818379496-da1e345b0ded?q=80&w=800" class="floating-img" alt="Purifier">
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800" alt="About Us">
+            </div>
+            <div class="about-text">
+                <div class="tag">YAYNU NAHAY?</div>
+                <h2>Xarunta Khubarada Biyaha</h2>
+                <p>Purexa waa shirkad Soomaaliyeed oo fadhigeedu yahay Muqdisho. Waxaan ku takhasusnay keenista iyo rakibidda nidaamyada sifeeynta biyaha ee Reverse Osmosis (RO) iyo Alkaline.</p>
+                <div class="about-stats">
+                    <div class="stat-box"><strong>5+</strong><span>Khibrad</span></div>
+                    <div class="stat-box"><strong>10k+</strong><span>Macaamiil</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="section-title">
+            <div class="tag">SERVICES</div>
+            <h2>Xirmooyinka Adeegyada</h2>
+        </div>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Basic Filter</h3>
+                <p>Sifeeynta 5 heer ah oo loogu talagalay guriga.</p>
+                <div class="price">Standard</div>
+                <button class="btn-add" onclick="addToCart('Basic Filter')">Add to Cart</button>
+            </div>
+            <div class="card featured">
+                <div class="popular">TOP SELLER</div>
+                <h3>Premium RO</h3>
+                <p>Sifeeynta 7 heer + UV Sterilization.</p>
+                <div class="price">Nano-Tech</div>
+                <button class="btn-add" onclick="addToCart('Premium RO')">Add to Cart</button>
+            </div>
+            <div class="card">
+                <h3>Advanced Alkaline</h3>
+                <p>9 heer + Macdanta jirka u roon.</p>
+                <div class="price">Full System</div>
+                <button class="btn-add" onclick="addToCart('Advanced Alkaline')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="section-title">
+            <div class="tag">GALLERY</div>
+            <h2>Daawo Shaqadeena</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=800" alt="Water 1"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1516715667032-7011d83e21dc?q=80&w=800" alt="Water 2"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800" alt="Water 3"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1519781542704-957ff19eff00?q=80&w=800" alt="Water 4"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523362628744-0c14a37ef8d2?q=80&w=800" alt="Water 5"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1617155093730-a8bf47be792d?q=80&w=800" alt="Water 6"></div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="section-title">
+            <div class="tag">TESTIMONIALS</div>
+            <h2>Macaamiishayada</h2>
+        </div>
+        <div class="t-grid">
+            <div class="t-card">
+                <div class="t-header">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200" class="avatar" alt="User">
+                    <div><strong>Axmed Muuse</strong><span>Mogadishu</span></div>
+                </div>
+                <p>"Purexa waa nidaamka ugu fiican ee sifeeynta biyaha ee aan abid isticmaalo."</p>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="t-card">
+                <div class="t-header">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200" class="avatar" alt="User">
+                    <div><strong>Hani Cali</strong><span>Mogadishu</span></div>
+                </div>
+                <p>"Adeeg degdeg ah iyo tayo sare. Aad baan ugu qanacsanahay."</p>
+                <div class="stars">★★★★★</div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/252906160407" class="wa-float" target="_blank">
+        <i data-lucide="message-circle"></i>
+        <span>Dalbo Hadda</span>
+    </a>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="f-info">
+                <div class="logo">PUREXA<span>.</span></div>
+                <p>Nagu soo booqo xaruntayada Muqdisho si aad u hesho biyo caafimaad leh.</p>
+            </div>
+            <div class="f-links">
+                <h4>Xiriirka</h4>
+                <p><i data-lucide="phone"></i> +252 90 616 0407</p>
+                <p><i data-lucide="map-pin"></i> Muqdisho, Somalia</p>
+            </div>
+            <div class="f-social">
+                <h4>Nagu la soco</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i data-lucide="fab fa-facebook"></i></a>
+                  
+                    <a href="https://instagram.com" target="_blank"><i data-lucide="instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i data-lucide="twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="f-bottom">
+            <p>&copy; 2026 Purexa Water Tech. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
